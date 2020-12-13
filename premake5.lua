@@ -1,10 +1,9 @@
 project "GLFW"
 	kind "StaticLib"
 	language "C"
-	outdir = "Debug-windows-x86_64"
-	targetdir ("bin/" .. outdir .. "/%{prj.name}")
-	objdir ("bin-int/" .. outdir .. "/%{prj.name}")
 
+	targetdir ("%{wks.location}/bin/" .. outputDir .. "/%{prj.name}")
+	objdir ("%{wks.location}/bin-int/" .. outputDir .. "/%{prj.name}")
 	files
 	{
 		"include/GLFW/glfw3.h",
